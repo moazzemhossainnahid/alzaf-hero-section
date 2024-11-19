@@ -8,9 +8,7 @@ export default function Home() {
     <div className="w-full">
       <Header />
       <main className="w-full min-h-screen">
-        <div className="container mx-auto">
-          <Banner />
-        </div>
+        <Banner />
       </main>
     </div>
   );
