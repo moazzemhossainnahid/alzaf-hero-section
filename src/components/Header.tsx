@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { AiOutlineHeart, AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUp, AiOutlineUser } from "react-icons/ai";
+import Category from "./Category";
 
 const Header = () => {
-
+    const [showCategory, setShowCategory] = useState(false);
 
 
     return (
@@ -41,8 +44,8 @@ const Header = () => {
             {/* Main Navbar */}
             <div className="bg-white py-4 border-b shadow-sm">
                 <div className="container mx-auto flex items-center justify-between px-4">
-                    <div className="w-40">
-                        <Link href="/">
+                    <div className="w-40 relative" onMouseEnter={() => setShowCategory(true)}
+                        onMouseLeave={() => setShowCategory(false)}>
                             <Image
                                 src="/alzaf.png"
                                 alt="Logo"
@@ -50,7 +53,11 @@ const Header = () => {
                                 height={16}
                                 priority
                             />
-                        </Link>
+                        {showCategory && (
+                            <div className="absolute top-full left-0 w-max mt-5 z-50">
+                                <Category />
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex relative items-center border rounded-lg bg-gray-100 overflow-hidden w-full lg:w-2/4 mx-5 mt-2 lg:mt-0">
