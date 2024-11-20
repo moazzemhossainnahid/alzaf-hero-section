@@ -14,7 +14,7 @@ const Category = () => {
                         key={index}
                         onMouseEnter={() => setHoveredCategory(category?.name || null)}
                         onMouseLeave={() => setHoveredCategory(null)}
-                        className="pl-2 flex justify-between items-center cursor-pointer hover:text-[#F97316] text-[#2E2E2E]"
+                        className="pl-2 pt-2 flex justify-between items-center cursor-pointer hover:text-[#F97316] text-[#2E2E2E]"
                     >
                         <span>{category?.name}</span>
                         {category?.subCategories && (
@@ -29,7 +29,7 @@ const Category = () => {
                                         key={subIndex}
                                         onMouseEnter={() => setHoveredSubCategory(subCategory?.name || null)}
                                         onMouseLeave={() => setHoveredSubCategory(null)}
-                                        className="pl-2 flex justify-between items-center cursor-pointer hover:text-[#F97316] text-[#2E2E2E]"
+                                        className="pl-2 pt-2 flex justify-between items-center cursor-pointer hover:text-[#F97316] text-[#2E2E2E]"
                                     >
                                         <span>{subCategory?.name}</span>
                                         {subCategory?.nastedSubcategories && (
@@ -41,7 +41,7 @@ const Category = () => {
                                                 {subCategory?.nastedSubcategories?.map((nested, nestedIndex) => (
                                                     <li
                                                         key={nestedIndex}
-                                                        className="hover:text-[#F97316] text-[#2E2E2E] cursor-pointer px-2"
+                                                        className="hover:text-[#F97316] text-[#2E2E2E] cursor-pointer pt-2 px-2"
                                                     >
                                                         {nested?.name}
                                                     </li>
