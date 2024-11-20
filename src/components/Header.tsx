@@ -44,7 +44,7 @@ const Header = () => {
             {/* Main Navbar */}
             <div className="bg-white py-4 border-b shadow-sm">
                 <div className="container mx-auto flex items-center justify-between px-4">
-                    <div className="w-40 relative" onMouseEnter={() => setShowCategory(true)}
+                    <div className="w-40 h-full relative" onMouseEnter={() => setShowCategory(true)}
                         onMouseLeave={() => setShowCategory(false)}>
                             <Image
                                 src="/alzaf.png"
@@ -54,7 +54,7 @@ const Header = () => {
                                 priority
                             />
                         {showCategory && (
-                            <div className="absolute top-full left-0 w-max mt-5 z-50">
+                            <div className="absolute top-full left-0 w-max pt-4 z-50">
                                 <Category />
                             </div>
                         )}

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div className="relative w-full h-[60vh] 2xl:h-[50vh] overflow-hidden">
       <div className="w-full h-full relative">
         <Image
-          src="/banner.png" // Replace with the actual image path
+          src="/banner.png"
           alt="Banner"
           layout="fill"
           objectFit="cover"
