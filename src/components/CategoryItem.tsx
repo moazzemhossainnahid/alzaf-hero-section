@@ -26,7 +26,6 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
     >
       <span>{category?.title}</span>
 
-      {/* Icon */}
       {category?.childrens && (
         <AiOutlineRight
           className={`mr-2 transform ${
@@ -35,7 +34,6 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
         />
       )}
 
-      {/* Animated Sub-Category */}
       {category?.childrens && (
         <ul
           className={`absolute left-full top-0 h-full w-[230px] bg-white border-x py-4 origin-left transform transition-all duration-300 ease-in-out ${
