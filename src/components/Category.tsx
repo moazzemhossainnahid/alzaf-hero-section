@@ -25,7 +25,7 @@ const Category: React.FC = () => {
 
   return (
     <div className="w-fit bg-white text-[#2E2E2E] border-x relative py-2 text-[12px]">
-      <ul className="min-w-60 h-full">
+      <ul className="w-[230px] h-full">
         {categories?.map((category) => (
           <CategoryItem key={category.id} category={category} />
         ))}

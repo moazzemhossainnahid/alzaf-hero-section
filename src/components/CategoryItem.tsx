@@ -28,7 +28,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
       {category?.childrens && <AiOutlineRight className="mr-2" />}
 
       {isHovered && category?.childrens && (
-        <ul className="absolute h-full min-w-60 left-full top-0 bg-white border-x py-4">
+        <ul className="absolute h-full w-[230px] left-full top-0 bg-white border-x py-4">
           {category?.childrens?.map((child) => (
             <CategoryItem key={child?.id} category={child} />
           ))}
