@@ -1,18 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { AiOutlineHeart, AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUp, AiOutlineUser } from "react-icons/ai";
 import Category from "./Category";
 
 const Header = () => {
-    const [showCategory, setShowCategory] = useState(false);
 
 
     return (
         <header className="w-full">
             {/* Top Header */}
-            <div className="bg-[#F0F1F1] py-2 text-sm">
+            <div className="bg-[#F0F1F1] h-[25px] text-[12px] py-1">
                 <div className="container mx-auto flex justify-between text-[#434343] items-center space-x-6 px-4">
                     <div className="flex items-center space-x-6">
                         <Link href="!#" className="hover:underline text-[#F97316] flex gap-2 items-center">
@@ -42,10 +40,9 @@ const Header = () => {
             </div>
 
             {/* Main Navbar */}
-            <div className="bg-white py-4 border-b shadow-sm">
+            <div className="bg-white py-2 h-[70px] border-b shadow-sm relative">
                 <div className="container mx-auto flex items-center justify-between px-4">
-                    <div className="w-40 h-full relative" onMouseEnter={() => setShowCategory(true)}
-                        onMouseLeave={() => setShowCategory(false)}>
+                    <div className="w-40 h-full relative">
                             <Image
                                 src="/alzaf.png"
                                 alt="Logo"
@@ -53,11 +50,9 @@ const Header = () => {
                                 height={16}
                                 priority
                             />
-                        {showCategory && (
-                            <div className="absolute top-full left-0 w-max pt-4 z-50">
+                            <div className="absolute top-full left-0 w-max pt-4 -mt-2 z-50">
                                 <Category />
                             </div>
-                        )}
                     </div>
 
                     <div className="flex relative items-center border rounded-lg bg-gray-100 overflow-hidden w-full lg:w-2/4 mx-5 mt-2 lg:mt-0">
@@ -87,7 +82,7 @@ const Header = () => {
                                 <Image
                                     src="/cloud_storage.svg"
                                     alt="Cloud Storage"
-                                    width={200}
+                                    width={180}
                                     height={14}
                                     priority
                                 />
