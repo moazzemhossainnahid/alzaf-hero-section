@@ -14,13 +14,13 @@ const Banner = () => {
         />
       </div>
 
-      <div className="absolute bottom-3 w-full flex justify-center">
+      <div className="absolute bottom-7 w-full flex justify-center">
         <div className="flex space-x-2">
-          <span className="w-2 h-2 bg-white rounded-full"></span>
-          <span className="w-2 h-2 bg-white rounded-full"></span>
-          <span className="w-2 h-2 bg-[#F97316] rounded-full"></span>
-          <span className="w-2 h-2 bg-white rounded-full"></span>
-          <span className="w-2 h-2 bg-white rounded-full"></span>
+          <span className="w-3 h-3 bg-white rounded-full"></span>
+          <span className="w-3 h-3 bg-white rounded-full"></span>
+          <span className="w-3 h-3 bg-[#F97316] rounded-full"></span>
+          <span className="w-3 h-3 bg-white rounded-full"></span>
+          <span className="w-3 h-3 bg-white rounded-full"></span>
         </div>
       </div>
     </div>
